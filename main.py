@@ -1,6 +1,7 @@
 import pandas as pd
 from models.logreg import logreg
 from models.neural import neural_network
+from models.xgboost import xgboost_model
 
 if __name__ == "__main__":
     
@@ -10,7 +11,6 @@ if __name__ == "__main__":
     y_test = pd.read_csv('data/y_test.csv').values.ravel()
     
     metrics_df = logreg(X_train, y_train, X_test, y_test, n_iter=20)
-
     metrics_df.to_csv('results/models_metrics_log.csv', index=False)
     print(metrics_df.head(3))
 
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     )
     metrics_df_nn.to_csv('results/models_metrics_nn.csv', index=False)
     print(metrics_df_nn.head(3))
+
+    metrics_df_xg = xgboost_model(X_train, y_train, X_test, y_test, n_iter=10)
+    metrics_df_xg.to_csv('results/xgb_metrics.csv', index=False)
+    print(metrics_df_xg.head(3))
