@@ -20,8 +20,22 @@ Dataset used for this project is available here: https://data.mendeley.com/datas
 
 ## 🚀 How to navigate
 
+- **data/** – contains the raw and preprocessed datasets  
+- **models/** – contains model scripts (Logistic Regression, Neural Network, XGBoost)  
+- **results/** – saved metrics and evaluation outputs  
+- **main.py** – script to run the project end-to-end  
+- **data_preprocessing.ipynb** – notebook for data cleaning and preprocessing  
+- **requirements.txt** – Python dependencies
 
 ## 📊 Results
+
+NOTE: Current best results (so far)
+| Model      | F1 (%) | Precision (%) | Recall (%) |
+|------------|--------|---------------|------------|
+| LogReg    | 21.9   | 14.0          | 50.7       |
+| NeuralNetwork        | 24.9   | 16.6          | 49.6       |
+| XGBoost   | 45.0   | 40.1          | 51.2       |
+
 
 ## 📜 Sources
 Salazar, Luiz Henrique (2023), “Medical Appointments No-Show”, Mendeley Data, V1, doi: 10.17632/wm6w2fvkfj.1
